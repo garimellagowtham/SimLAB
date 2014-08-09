@@ -50,7 +50,8 @@ classdef SixDOF < Constraint
         this.Shape_A = varargin{1};    
         transform = varargin{2};
         rpy = transform(4:6);
-        quat = angle2quat(rpy(1), rpy(2), rpy(3), 'XYZ');
+        quat = rpy2quat([rpy(3), rpy(2), rpy(1)])';
+        %quat = angle2quat(rpy(1), rpy(2), rpy(3), 'XYZ');
         this.Transform_A = [transform(1), transform(2), transform(3), quat];
         this.Shape_B = 0;
         this.limits.lin_xmax = 1;
@@ -73,11 +74,13 @@ classdef SixDOF < Constraint
         this.Shape_B = varargin{2};
         transform = varargin{3};
         rpy = transform(4:6);
-        quat = angle2quat(rpy(1), rpy(2), rpy(3), 'XYZ');
+        quat = rpy2quat([rpy(3), rpy(2), rpy(1)])';
+        %quat = angle2quat(rpy(1), rpy(2), rpy(3), 'XYZ');
         this.Transform_A = [transform(1), transform(2), transform(3), quat];
         transform = varargin{4};
         rpy = transform(4:6);
-        quat = angle2quat(rpy(1), rpy(2), rpy(3), 'XYZ');
+        quat = rpy2quat([rpy(3), rpy(2), rpy(1)])';
+        %quat = angle2quat(rpy(1), rpy(2), rpy(3), 'XYZ');
         this.Transform_B = [transform(1), transform(2), transform(3), quat];
         this.limits.lin_xmax = 1;
         this.limits.lin_ymax = 1;
