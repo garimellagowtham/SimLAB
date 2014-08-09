@@ -3,6 +3,8 @@ SimLAB
 ---------------------------------
 Author: Brandon Minor, Autonomous Robotics Group,
         George Washington University
+Modified By: Gowtham Garimell, ASCOL Robotics Group,
+				Johns Hopkins University
 
 SimLAB is a MATLAB Physics Simulator that utilizes the Bullet Physics Engine.
 This program's goal is to allow for convenient use of the MATLAB libraries
@@ -19,10 +21,11 @@ SimLAB only requires a couple of things:
   * Boost C++ Libraries: http://www.boost.org/
 
 SimLAB uses bulle-2.81 which is already packaged inside the folder. The usual procedure in Linux is:
-	* run bullet_setup.bash (Only works in Linux)
-	* run cmake .
+  * run bullet_setup.bash (Only works in Linux)
+  * run cmake .
+
 	This will write a file called SETUP.m with all the folders setup correctly
-	* Currently this scripts etc are not supported in windows and will be added in near future #TODO
+  * Currently this scripts etc are not supported in windows and will be added in near future #TODO
 ---------
 DEMOS
 ---------
